@@ -147,23 +147,23 @@ const ClipRenderErrorBox: React.FC<{ errorMessage: string; t: any; onRetry?: () 
       style={{
         marginTop: '0.4rem',
         padding: '0.55rem 0.75rem',
-        background: 'rgba(255, 30, 39, 0.12)',
-        border: '1px solid #ff1e27',
+        background: 'var(--status-error-bg)',
+        border: '1px solid var(--status-error)',
         borderRadius: 0,
         fontSize: '0.72rem',
-        color: '#fca5a5',
+        color: 'var(--status-error)',
         display: 'flex',
         flexDirection: 'column',
         gap: '0.35rem',
         lineHeight: 1.4,
         wordBreak: 'break-word',
-        boxShadow: '0 0 10px rgba(255, 30, 39, 0.25)'
+        boxShadow: '0 0 10px var(--status-error-bg)'
       }}
     >
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '0.6rem' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
-          <AlertTriangle size={15} color="#ff1e27" style={{ flexShrink: 0, marginTop: '1px' }} />
-          <span style={{ fontWeight: 700, color: '#fff' }}>{friendly}</span>
+          <AlertTriangle size={15} color="var(--status-error)" style={{ flexShrink: 0, marginTop: '1px' }} />
+          <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{friendly}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', flexShrink: 0 }}>
           {onRetry && (
@@ -174,16 +174,16 @@ const ClipRenderErrorBox: React.FC<{ errorMessage: string; t: any; onRetry?: () 
                 onRetry();
               }}
               style={{
-                background: 'linear-gradient(135deg, #f59e0b, #d97706)',
-                border: '1px solid rgba(245, 158, 11, 0.6)',
+                background: 'linear-gradient(135deg, var(--status-warning), var(--status-warning))',
+                border: '1px solid var(--status-warning)',
                 borderRadius: 0,
-                color: '#ffffff',
+                color: 'var(--on-primary)',
                 fontSize: '0.65rem',
                 padding: '2px 8px',
                 cursor: 'pointer',
                 fontWeight: 700,
                 transition: 'all 0.2s ease',
-                boxShadow: '0 0 8px rgba(245, 158, 11, 0.35)',
+                boxShadow: '0 0 8px var(--status-warning-bg)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.25rem'
@@ -198,8 +198,8 @@ const ClipRenderErrorBox: React.FC<{ errorMessage: string; t: any; onRetry?: () 
             type="button"
             onClick={handleCopy}
             style={{
-              background: copied ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.08)',
-              border: `1px solid ${copied ? 'rgba(16, 185, 129, 0.4)' : 'rgba(255, 255, 255, 0.15)'}`,
+              background: copied ? 'var(--status-success-bg)' : 'var(--border-color)',
+              border: `1px solid ${copied ? 'var(--status-success-bg)' : 'var(--border-color)'}`,
               borderRadius: 0,
               color: copied ? '#34d399' : '#e2e8f0',
               fontSize: '0.65rem',
@@ -219,7 +219,7 @@ const ClipRenderErrorBox: React.FC<{ errorMessage: string; t: any; onRetry?: () 
         </div>
       </div>
 
-      <details style={{ fontSize: '0.67rem', color: '#94a3b8', marginTop: '0.15rem' }}>
+      <details style={{ fontSize: '0.67rem', color: 'var(--text-secondary)', marginTop: '0.15rem' }}>
         <summary style={{ cursor: 'pointer', color: '#cbd5e1', userSelect: 'none', fontWeight: 500 }}>
           {t.studio.errorDetails || 'Technical Log Details'}
         </summary>
@@ -228,9 +228,9 @@ const ClipRenderErrorBox: React.FC<{ errorMessage: string; t: any; onRetry?: () 
             margin: '0.35rem 0 0 0',
             padding: '0.4rem 0.55rem',
             background: 'rgba(0, 0, 0, 0.55)',
-            border: '1px solid rgba(239, 68, 68, 0.2)',
+            border: '1px solid var(--status-error-bg)',
             borderRadius: '4px',
-            color: '#f87171',
+            color: 'var(--status-error)',
             fontSize: '0.65rem',
             fontFamily: 'Consolas, Monaco, monospace',
             whiteSpace: 'pre-wrap',
@@ -2011,7 +2011,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
           <div>
             <div className="studio-title-badge-row">
               <h2 className="studio-main-heading" style={{ fontSize: '1.4rem', fontFamily: 'var(--font-mono)', fontWeight: 800 }}>
-                <span style={{ color: '#ff00ff' }}>&gt;_</span> {t.studio.heading}
+                {t.studio.heading}
               </h2>
             </div>
             <p className="studio-subtext">
@@ -2031,10 +2031,10 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                 fontSize: '0.78rem',
                 fontWeight: 700,
                 fontFamily: 'var(--font-mono)',
-                background: 'rgba(255, 0, 255, 0.12)',
-                border: '1px solid #ff00ff',
-                color: '#ff00ff',
-                boxShadow: '0 0 10px rgba(255, 0, 255, 0.25)',
+                background: 'var(--primary-soft)',
+                border: '1px solid var(--primary)',
+                color: 'var(--primary)',
+                boxShadow: '0 0 10px var(--primary-soft)',
                 cursor: 'pointer',
                 borderRadius: 0,
                 display: 'inline-flex',
@@ -2059,21 +2059,21 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
               fontSize: '0.78rem',
               fontWeight: 700,
               fontFamily: 'var(--font-mono)',
-              background: '#0d0d14',
-              border: '1px solid #272238',
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--border-color)',
               color: 'var(--text-secondary)',
               cursor: 'pointer',
               transition: 'all 0.2s ease',
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.color = '#ff1e27';
-              e.currentTarget.style.borderColor = '#ff1e27';
-              e.currentTarget.style.background = 'rgba(255, 30, 39, 0.1)';
+              e.currentTarget.style.color = 'var(--status-error)';
+              e.currentTarget.style.borderColor = 'var(--status-error)';
+              e.currentTarget.style.background = 'var(--status-error-bg)';
             }}
             onMouseLeave={e => {
               e.currentTarget.style.color = 'var(--text-secondary)';
-              e.currentTarget.style.borderColor = '#272238';
-              e.currentTarget.style.background = '#0d0d14';
+              e.currentTarget.style.borderColor = 'var(--border-color)';
+              e.currentTarget.style.background = 'var(--bg-surface)';
             }}
             title={t.studio.resetToDefaultsTooltip || 'Reset all settings to default values'}
           >
@@ -2210,13 +2210,13 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
 
               {/* Manual Camera Centering & Focal Point Controls */}
               {aspectRatio !== '16:9_landscape' && streamerPreset === 'none' && (
-                <div className="manual-camera-framing-box" style={{ marginTop: '0.75rem', padding: '0.65rem 0.75rem', borderRadius: '6px', background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                <div className="manual-camera-framing-box" style={{ marginTop: '0.75rem', padding: '0.65rem 0.75rem', borderRadius: '6px', background: 'var(--border-color)', border: '1px solid var(--border-color)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.45rem', flexWrap: 'wrap', gap: '0.35rem' }}>
                     <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
                       // {t.studio.manualCameraCentering || "Manual Camera Centering (Horizontal Crop):"}
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <span className="badge" style={{ fontSize: '0.70rem', padding: '0.12rem 0.45rem', background: isManualCropX ? 'rgba(56, 189, 248, 0.2)' : 'rgba(255,255,255,0.08)', color: isManualCropX ? '#38bdf8' : 'var(--text-muted)' }}>
+                      <span className="badge" style={{ fontSize: '0.70rem', padding: '0.12rem 0.45rem', background: isManualCropX ? 'rgba(56, 189, 248, 0.2)' : 'var(--border-color)', color: isManualCropX ? '#38bdf8' : 'var(--text-muted)' }}>
                         {isManualCropX ? `${manualCropX}% ${manualCropX === 50 ? '(Center)' : manualCropX < 50 ? '(Left)' : '(Right)'}` : (t.studio.aiAutoMode || "⚡ AI Auto Track")}
                       </span>
                       {isManualCropX && (
@@ -2224,7 +2224,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           type="button"
                           className="reset-btn"
                           onClick={handleResetCropX}
-                          style={{ fontSize: '0.70rem', padding: '0.12rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                          style={{ fontSize: '0.70rem', padding: '0.12rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                         >
                           {t.studio.resetCrop || "↺ Auto AI"}
                         </button>
@@ -2302,9 +2302,9 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         fontSize: '0.7rem',
                         padding: '0.15rem 0.5rem',
                         borderRadius: '4px',
-                        background: faceBox.type === 'salient_object' ? 'rgba(56, 189, 248, 0.15)' : 'rgba(34, 197, 94, 0.15)',
-                        color: faceBox.type === 'salient_object' ? '#38bdf8' : '#4ade80',
-                        border: `1px solid ${faceBox.type === 'salient_object' ? 'rgba(56, 189, 248, 0.3)' : 'rgba(34, 197, 94, 0.3)'}`,
+                        background: faceBox.type === 'salient_object' ? 'rgba(56, 189, 248, 0.15)' : 'var(--status-success-bg)',
+                        color: faceBox.type === 'salient_object' ? '#38bdf8' : 'var(--status-success)',
+                        border: `1px solid ${faceBox.type === 'salient_object' ? 'rgba(56, 189, 248, 0.3)' : 'var(--status-success-bg)'}`,
                         fontWeight: 600
                       }}>
                         {faceBox.type === 'salient_object' ? 'AI Object Focus' : 'AI Face Focus'}
@@ -2412,7 +2412,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     </button>
                   ))}
                 </div>
-                <p style={{ fontSize: '0.72rem', color: 'var(--text-muted, #94a3b8)', marginTop: '0.35rem', margin: '0.35rem 0 0 0' }}>
+                <p style={{ fontSize: '0.72rem', color: 'var(--text-muted, var(--text-secondary))', marginTop: '0.35rem', margin: '0.35rem 0 0 0' }}>
                   {t.studio.facecamHint || 'Tip: Select your webcam corner if auto-detection misses dark rooms or VTuber avatars.'}
                 </p>
               </div>
@@ -2541,7 +2541,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                 </div>
 
                 {/* Batch Helper Note */}
-                <div style={{ marginTop: '0.5rem', fontSize: '0.74rem', color: 'var(--text-muted, #94a3b8)', lineHeight: 1.4 }}>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.74rem', color: 'var(--text-muted, var(--text-secondary))', lineHeight: 1.4 }}>
                   {t.studio.batchTitleNote}
                 </div>
 
@@ -2597,7 +2597,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         style={{ fontFamily: font.name, fontSize: '0.78rem', fontWeight: titleFont === font.name ? 700 : 400 }}
                       >
                         {font.name}
-                        {font.is_custom && <span style={{ marginLeft: '4px', fontSize: '0.62rem', opacity: 0.85, color: '#fbbf24' }}>[*]</span>}
+                        {font.is_custom && <span style={{ marginLeft: '4px', fontSize: '0.62rem', opacity: 0.85, color: 'var(--status-warning)' }}>[*]</span>}
                       </button>
                     ))}
                   </div>
@@ -2722,7 +2722,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           fontSize: '0.78rem',
                           textAlign: 'center',
                           borderRadius: '6px',
-                          border: titleFontSize === 'custom' ? '1px solid var(--primary, #38bdf8)' : '1px solid rgba(255,255,255,0.15)',
+                          border: titleFontSize === 'custom' ? '1px solid var(--primary, #38bdf8)' : '1px solid var(--border-color)',
                         }}
                         title="Enter custom title font size in pixels (px, 1 - 1000)"
                       />
@@ -2774,7 +2774,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         className="reset-btn"
                         onClick={handleResetTitlePosition}
                         title={t.studio.resetPositionTooltip}
-                        style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                        style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                       >
                         {t.studio.resetPosition}
                       </button>
@@ -2841,7 +2841,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         type="button"
                         className="reset-btn"
                         onClick={handleResetTitleHorizontal}
-                        style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                        style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                       >
                         {t.studio.resetHorizontal || "↺ Reset Center"}
                       </button>
@@ -3068,7 +3068,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         style={{ fontFamily: font.name, fontSize: '0.78rem', fontWeight: captionFont === font.name ? 700 : 400 }}
                       >
                         {font.name}
-                        {font.is_custom && <span style={{ marginLeft: '4px', fontSize: '0.62rem', opacity: 0.85, color: '#fbbf24' }}>[*]</span>}
+                        {font.is_custom && <span style={{ marginLeft: '4px', fontSize: '0.62rem', opacity: 0.85, color: 'var(--status-warning)' }}>[*]</span>}
                       </button>
                     ))}
                   </div>
@@ -3193,7 +3193,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           fontSize: '0.78rem',
                           textAlign: 'center',
                           borderRadius: '6px',
-                          border: fontSize === 'custom' ? '1px solid var(--primary, #38bdf8)' : '1px solid rgba(255,255,255,0.15)',
+                          border: fontSize === 'custom' ? '1px solid var(--primary, #38bdf8)' : '1px solid var(--border-color)',
                         }}
                         title="Enter custom subtitle font size in pixels (px, 1 - 1000)"
                       />
@@ -3266,7 +3266,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           className="reset-btn"
                           onClick={handleResetSubtitlePosition}
                           title={t.studio.resetPositionTooltip}
-                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                         >
                           {t.studio.resetPosition}
                         </button>
@@ -3339,7 +3339,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           className="reset-btn"
                           onClick={handleResetSubtitlePosition}
                           title={t.studio.resetPositionTooltip}
-                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                         >
                           {t.studio.resetPosition}
                         </button>
@@ -3391,7 +3391,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                       {t.studio.subtitleSyncLabel || "// Subtitle Audio Sync Offset:"}
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                      <span className="badge" style={{ fontSize: '0.74rem', padding: '0.15rem 0.45rem', background: subtitleOffsetSeconds !== 0 ? 'rgba(56, 189, 248, 0.2)' : 'rgba(255,255,255,0.08)', color: subtitleOffsetSeconds !== 0 ? '#38bdf8' : 'var(--text-muted)' }}>
+                      <span className="badge" style={{ fontSize: '0.74rem', padding: '0.15rem 0.45rem', background: subtitleOffsetSeconds !== 0 ? 'rgba(56, 189, 248, 0.2)' : 'var(--border-color)', color: subtitleOffsetSeconds !== 0 ? '#38bdf8' : 'var(--text-muted)' }}>
                         {subtitleOffsetSeconds > 0 ? `+${subtitleOffsetSeconds.toFixed(2)}s (Later)` : subtitleOffsetSeconds < 0 ? `${subtitleOffsetSeconds.toFixed(2)}s (Earlier)` : 'Exact Sync (0.00s)'}
                       </span>
                       {subtitleOffsetSeconds !== 0 && (
@@ -3400,7 +3400,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           className="reset-btn"
                           onClick={() => setSubtitleOffsetSeconds(0)}
                           title="Reset sync offset to 0.00s"
-                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
+                          style={{ fontSize: '0.72rem', padding: '0.15rem 0.4rem', border: '1px solid var(--border-color)', background: 'transparent', color: 'var(--text-muted)', borderRadius: '4px', cursor: 'pointer' }}
                         >
                           {t.studio.resetSync || "↺ 0.00s"}
                         </button>
@@ -3485,7 +3485,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   </label>
                 )}
               </div>
-              <span className="group-badge" style={{ color: bgmEnabled && bgmFilePath ? '#10b981' : 'var(--text-muted)' }}>
+              <span className="group-badge" style={{ color: bgmEnabled && bgmFilePath ? 'var(--status-success)' : 'var(--text-muted)' }}>
                 {bgmEnabled && bgmFilePath ? t.studio.bgmActiveBadge : t.studio.bgmOptionalBadge}
               </span>
             </div>
@@ -3649,7 +3649,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
           <div className="studio-card-group group-sfx">
             <div className="group-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span className="group-title">{t.studio.hookSfxTitle}</span>
-              <span className="group-badge" style={{ color: hookSfxFilePath ? '#10b981' : 'var(--text-muted)', fontWeight: 500 }}>
+              <span className="group-badge" style={{ color: hookSfxFilePath ? 'var(--status-success)' : 'var(--text-muted)', fontWeight: 500 }}>
                 {hookSfxFilePath ? t.studio.hookSfxActiveBadge : t.studio.bgmOptionalBadge}
               </span>
             </div>
@@ -3697,7 +3697,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     <span className="bgm-icon">*</span>
                     <div className="bgm-details">
                       <span className="bgm-filename" title={hookSfxFileName}>{hookSfxFileName}</span>
-                      <span className="bgm-status-tag" style={{ background: 'rgba(234, 179, 8, 0.15)', color: '#facc15', borderColor: 'rgba(234, 179, 8, 0.3)' }}>
+                      <span className="bgm-status-tag" style={{ background: 'var(--status-warning-bg)', color: '#facc15', borderColor: 'var(--status-warning-bg)' }}>
                         {t.studio.hookSfxFirstFrameBadge}
                       </span>
                     </div>
@@ -3901,7 +3901,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                           <img
                             src={watermarkImageUrl}
                             alt="Logo"
-                            style={{ width: '28px', height: '28px', objectFit: 'contain', borderRadius: '4px', background: 'rgba(255,255,255,0.08)' }}
+                            style={{ width: '28px', height: '28px', objectFit: 'contain', borderRadius: '4px', background: 'var(--border-color)' }}
                           />
                           <div className="bgm-details">
                             <span className="bgm-filename" title={watermarkImageFileName}>{watermarkImageFileName}</span>
@@ -3970,9 +3970,9 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                             padding: '0.2rem 0.5rem',
                             fontSize: '0.72rem',
                             borderRadius: '4px',
-                            background: watermarkSize === sz ? 'var(--primary)' : 'rgba(255,255,255,0.06)',
+                            background: watermarkSize === sz ? 'var(--primary)' : 'var(--border-color)',
                             color: watermarkSize === sz ? '#fff' : 'var(--text-muted)',
-                            border: '1px solid rgba(255,255,255,0.1)',
+                            border: '1px solid var(--border-color)',
                             cursor: 'pointer',
                           }}
                           onClick={() => setWatermarkSize(sz)}
@@ -4084,9 +4084,9 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                       type="button"
                       onClick={handleResetWatermark}
                       style={{
-                        background: 'rgba(239, 68, 68, 0.15)',
-                        color: '#f87171',
-                        border: '1px solid rgba(239, 68, 68, 0.3)',
+                        background: 'var(--status-error-bg)',
+                        color: 'var(--status-error)',
+                        border: '1px solid var(--status-error-bg)',
                         fontSize: '0.72rem',
                         padding: '0.25rem 0.6rem',
                         borderRadius: '5px',
@@ -4293,7 +4293,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
             <div className="group-header">
               <span className="group-title">* {t.studio.renderModeTitle}</span>
               {renderMode === 'merged' && (
-                <span className="group-badge" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#34d399', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
+                <span className="group-badge" style={{ background: 'var(--status-success-bg)', color: '#34d399', border: '1px solid var(--status-success-bg)' }}>
                   {t.studio.compilationSegmentsSummary(selectedClips.length, totalSelectedDuration)}
                 </span>
               )}
@@ -4370,9 +4370,9 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   onClick={handleToggleAllClips}
                   title={selectedClips.length === allClips.length ? t.studio.unmarkAllClips : t.studio.markAllClips}
                   style={{
-                    background: selectedClips.length === allClips.length ? 'rgba(239, 68, 68, 0.12)' : 'rgba(168, 85, 247, 0.15)',
-                    border: selectedClips.length === allClips.length ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid rgba(168, 85, 247, 0.4)',
-                    color: selectedClips.length === allClips.length ? '#f87171' : 'var(--primary, #a855f7)',
+                    background: selectedClips.length === allClips.length ? 'var(--status-error-bg)' : 'var(--primary-soft)',
+                    border: selectedClips.length === allClips.length ? '1px solid var(--status-error-bg)' : '1px solid var(--primary-soft)',
+                    color: selectedClips.length === allClips.length ? 'var(--status-error)' : 'var(--primary, var(--primary))',
                     borderRadius: '6px',
                     padding: '0.22rem 0.55rem',
                     fontSize: '0.72rem',
@@ -4657,9 +4657,9 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                 style={{
                   fontSize: '0.72rem',
                   fontWeight: 700,
-                  color: isPlaying ? '#10b981' : playerReady ? '#38bdf8' : '#94a3b8',
-                  background: isPlaying ? 'rgba(16, 185, 129, 0.15)' : playerReady ? 'rgba(56, 189, 248, 0.12)' : 'rgba(255, 255, 255, 0.08)',
-                  border: isPlaying ? '1px solid rgba(16, 185, 129, 0.35)' : playerReady ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.15)',
+                  color: isPlaying ? 'var(--status-success)' : playerReady ? '#38bdf8' : 'var(--text-secondary)',
+                  background: isPlaying ? 'var(--status-success-bg)' : playerReady ? 'rgba(56, 189, 248, 0.12)' : 'var(--border-color)',
+                  border: isPlaying ? '1px solid var(--status-success-bg)' : playerReady ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid var(--border-color)',
                   padding: '0.15rem 0.5rem',
                   borderRadius: '6px',
                 }}
@@ -4909,7 +4909,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         textAlign: 'center',
                         color: '#ffffff',
                         fontWeight: 800,
-                        textShadow: '0 0 2px #000, 0 1px 3px rgba(0,0,0,0.95), 0 0 5px rgba(0,0,0,0.8)',
+                        textShadow: '0 0 2px #000, 0 1px 3px var(--bg-surface), 0 0 5px rgba(0,0,0,0.8)',
                         background: 'transparent',
                         padding: '0 8px',
                         boxSizing: 'border-box',
@@ -4959,7 +4959,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                         fontWeight: 800,
                         letterSpacing: '0.03em',
                         textAlign: 'center',
-                        textShadow: '0 0 2px #000, 0 1px 3px rgba(0,0,0,0.95), 0 0 5px rgba(0,0,0,0.8)',
+                        textShadow: '0 0 2px #000, 0 1px 3px var(--bg-surface), 0 0 5px rgba(0,0,0,0.8)',
                         display: 'inline-block',
                       }}
                     >
@@ -4978,8 +4978,8 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                                   display: 'inline-block',
                                   transition: 'transform 0.08s ease, color 0.08s ease',
                                   textShadow: isActive
-                                    ? `0 0 3px #000, 0 1px 4px rgba(0,0,0,0.95), 0 0 8px ${currentStyle.highlight}88`
-                                    : '0 0 2px #000, 0 1px 3px rgba(0,0,0,0.95), 0 0 5px rgba(0,0,0,0.8)',
+                                    ? `0 0 3px #000, 0 1px 4px var(--bg-surface), 0 0 8px ${currentStyle.highlight}88`
+                                    : '0 0 2px #000, 0 1px 3px var(--bg-surface), 0 0 5px rgba(0,0,0,0.8)',
                                 }}
                               >
                                 {applyLetterCase(w.text, textCase)}
@@ -5113,10 +5113,10 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     style={{
                       width: '30px',
                       height: '30px',
-                      background: isMuted ? 'rgba(255, 0, 255, 0.15)' : '#060608',
-                      border: isMuted ? '1px solid #ff00ff' : '1px solid #201e2c',
-                      color: isMuted ? '#ff00ff' : '#ffffff',
-                      boxShadow: isMuted ? '0 0 8px rgba(255, 0, 255, 0.35)' : 'none',
+                      background: isMuted ? 'var(--primary-soft)' : 'var(--bg-main)',
+                      border: isMuted ? '1px solid var(--primary)' : '1px solid var(--border-color)',
+                      color: isMuted ? 'var(--primary)' : '#ffffff',
+                      boxShadow: isMuted ? '0 0 8px var(--primary-soft)' : 'none',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -5154,10 +5154,10 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     style={{
                       width: '30px',
                       height: '30px',
-                      background: isLooping ? 'rgba(255, 0, 255, 0.2)' : '#060608',
-                      border: isLooping ? '1px solid #ff00ff' : '1px solid #201e2c',
-                      color: isLooping ? '#ff00ff' : 'var(--text-muted)',
-                      boxShadow: isLooping ? '0 0 8px rgba(255, 0, 255, 0.45)' : 'none',
+                      background: isLooping ? 'var(--primary-soft)' : 'var(--bg-main)',
+                      border: isLooping ? '1px solid var(--primary)' : '1px solid var(--border-color)',
+                      color: isLooping ? 'var(--primary)' : 'var(--text-muted)',
+                      boxShadow: isLooping ? '0 0 8px var(--primary-soft)' : 'none',
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
@@ -5180,10 +5180,10 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
               <div className="history-card-header">
                 <span className="history-card-title">{t.studio.renderSpecsTitle}</span>
                 <span className="history-badge-pill" style={{
-                  background: 'rgba(0, 229, 255, 0.15)',
-                  border: '1px solid #00e5ff',
-                  color: '#00e5ff',
-                  boxShadow: '0 0 8px rgba(0, 229, 255, 0.35)',
+                  background: 'var(--status-info-bg)',
+                  border: '1px solid var(--status-info)',
+                  color: 'var(--status-info)',
+                  boxShadow: '0 0 8px var(--status-info-bg)',
                   fontWeight: 700,
                   borderRadius: 0
                 }}>
@@ -5373,8 +5373,8 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   onClick={handleClearTempClick}
                   disabled={isClearingTemp}
                   style={{
-                    background: 'rgba(255, 255, 255, 0.07)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    background: 'var(--border-color)',
+                    border: '1px solid var(--border-color)',
                     color: 'var(--text-secondary)',
                     fontSize: '0.72rem',
                     fontWeight: 600,
@@ -5387,7 +5387,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   {isClearingTemp ? t.studio.clearingTempBtn : t.studio.clearTempBtn}
                 </button>
                 {tempClearMsg && (
-                  <span style={{ fontSize: '0.72rem', color: '#4ade80', fontWeight: 600 }}>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--status-success)', fontWeight: 600 }}>
                     {tempClearMsg}
                   </span>
                 )}
@@ -5411,8 +5411,8 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
               gap: '0.75rem',
               padding: '0.7rem 1.1rem',
               borderRadius: '9px',
-              background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.06) 100%)',
-              border: '1px solid rgba(245, 158, 11, 0.35)',
+              background: 'linear-gradient(135deg, var(--status-warning-bg) 0%, var(--status-warning-bg) 100%)',
+              border: '1px solid var(--status-warning-bg)',
               cursor: onOpenCookiesModal ? 'pointer' : 'default',
               margin: '0.65rem 0',
               transition: 'all 0.15s ease',
@@ -5420,7 +5420,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', textAlign: 'left' }}>
               <span style={{ fontSize: '1.15rem' }}>[!]</span>
-              <span style={{ fontSize: '0.79rem', color: '#fbbf24', fontWeight: 500, lineHeight: 1.4 }}>
+              <span style={{ fontSize: '0.79rem', color: 'var(--status-warning)', fontWeight: 500, lineHeight: 1.4 }}>
                 {t.cookieWarning.studioBannerWarning}
               </span>
             </div>
@@ -5430,8 +5430,8 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   fontSize: '0.76rem',
                   fontWeight: 700,
                   color: '#34d399',
-                  background: 'rgba(16, 185, 129, 0.15)',
-                  border: '1px solid rgba(16, 185, 129, 0.35)',
+                  background: 'var(--status-success-bg)',
+                  border: '1px solid var(--status-success-bg)',
                   padding: '0.25rem 0.65rem',
                   borderRadius: '6px',
                   whiteSpace: 'nowrap',
@@ -5498,15 +5498,15 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.35rem',
-                    background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                    border: '1px solid rgba(245, 158, 11, 0.7)',
-                    color: '#ffffff',
+                    background: 'linear-gradient(135deg, var(--status-warning) 0%, var(--status-warning) 100%)',
+                    border: '1px solid var(--status-warning)',
+                    color: 'var(--on-primary)',
                     fontWeight: 700,
                     fontSize: '0.72rem',
                     padding: '0.3rem 0.65rem',
                     borderRadius: '6px',
                     cursor: 'pointer',
-                    boxShadow: '0 0 10px rgba(245, 158, 11, 0.35)',
+                    boxShadow: '0 0 10px var(--status-warning-bg)',
                     transition: 'all 0.2s ease',
                   }}
                   title="Retry all failed clips in this batch"
@@ -5526,15 +5526,15 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.35rem',
-                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                    border: '1px solid rgba(16, 185, 129, 0.6)',
-                    color: '#ffffff',
+                    background: 'linear-gradient(135deg, var(--status-success) 0%, var(--status-success) 100%)',
+                    border: '1px solid var(--status-success)',
+                    color: 'var(--on-primary)',
                     fontWeight: 700,
                     fontSize: '0.72rem',
                     padding: '0.3rem 0.65rem',
                     borderRadius: '6px',
                     textDecoration: 'none',
-                    boxShadow: '0 0 12px rgba(16, 185, 129, 0.35)',
+                    boxShadow: '0 0 12px var(--status-success-bg)',
                     cursor: 'pointer',
                   }}
                 >
@@ -5547,7 +5547,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   type="button"
                   className="studio-close-btn"
                   onClick={onDismissProgress}
-                  style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', fontSize: '1rem', padding: '0.1rem 0.3rem' }}
+                  style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', fontSize: '1rem', padding: '0.1rem 0.3rem' }}
                   title={t.studio.dismissQueue}
                 >
                   ✕
@@ -5561,36 +5561,36 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
             <div style={{
               margin: '0.5rem 0 0.2rem',
               padding: '0.55rem 0.75rem',
-              background: 'rgba(255, 30, 39, 0.12)',
-              border: '1px solid #ff1e27',
+              background: 'var(--status-error-bg)',
+              border: '1px solid var(--status-error)',
               borderRadius: 0,
-              color: '#fca5a5',
+              color: 'var(--status-error)',
               fontSize: '0.74rem',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
               gap: '0.45rem',
               fontWeight: 600,
-              boxShadow: '0 0 10px rgba(255, 30, 39, 0.25)'
+              boxShadow: '0 0 10px var(--status-error-bg)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <AlertTriangle size={15} color="#ff1e27" />
-                <span style={{ color: '#fff', fontWeight: 700 }}>{batchProgress.error_message || t.studio.allClipsFailed}</span>
+                <AlertTriangle size={15} color="var(--status-error)" />
+                <span style={{ color: 'var(--text-primary)', fontWeight: 700 }}>{batchProgress.error_message || t.studio.allClipsFailed}</span>
               </div>
               {onRetryClip && (
                 <button
                   type="button"
                   onClick={() => onRetryClip()}
                   style={{
-                    background: 'linear-gradient(135deg, #f59e0b, #d97706)',
-                    border: '1px solid rgba(245, 158, 11, 0.6)',
-                    color: '#fff',
+                    background: 'linear-gradient(135deg, var(--status-warning), var(--status-warning))',
+                    border: '1px solid var(--status-warning)',
+                    color: 'var(--on-primary)',
                     fontWeight: 700,
                     fontSize: '0.7rem',
                     padding: '3px 9px',
                     borderRadius: 0,
                     cursor: 'pointer',
-                    boxShadow: '0 0 8px rgba(245, 158, 11, 0.35)',
+                    boxShadow: '0 0 8px var(--status-warning-bg)',
                     flexShrink: 0,
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -5606,14 +5606,14 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
 
           {/* Overall Progress Bar */}
           <div className="batch-overall-bar-wrap">
-            <div className="batch-overall-bar" style={{ height: '5px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden' }}>
+            <div className="batch-overall-bar" style={{ height: '5px', background: 'var(--border-color)', borderRadius: '3px', overflow: 'hidden' }}>
               <div
                 className="batch-overall-fill"
                 style={{
                   height: '100%',
                   background: batchProgress.overall_status === 'error'
                     ? '#ef4444'
-                    : 'linear-gradient(90deg, #ff5e3a, #ff2a5f)',
+                    : 'linear-gradient(90deg, var(--status-warning), var(--status-error))',
                   width: `${Math.round((batchProgress.clips.filter(c => c.status === 'completed').length / (batchProgress.total_clips || 1)) * 100)}%`,
                   transition: 'width 0.3s ease'
                 }}
@@ -5677,8 +5677,8 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                   style={{
                     padding: '0.5rem 0.75rem',
                     borderRadius: '8px',
-                    background: isError ? 'rgba(239, 68, 68, 0.05)' : 'rgba(255,255,255,0.03)',
-                    border: isError ? '1px solid rgba(239, 68, 68, 0.3)' : '1px solid rgba(255,255,255,0.06)',
+                    background: isError ? 'var(--status-error-bg)' : 'var(--border-color)',
+                    border: isError ? '1px solid var(--status-error-bg)' : '1px solid var(--border-color)',
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '0.25rem',
@@ -5686,12 +5686,12 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', maxWidth: '65%' }}>
-                      <span style={{ fontSize: '0.7rem', color: isError ? '#f87171' : 'var(--text-muted)', fontWeight: 600 }}>#{idx + 1}</span>
-                      <span style={{ fontSize: '0.75rem', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{clip.title}</span>
+                      <span style={{ fontSize: '0.7rem', color: isError ? 'var(--status-error)' : 'var(--text-muted)', fontWeight: 600 }}>#{idx + 1}</span>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{clip.title}</span>
                     </div>
                     <div>
                       {clip.status === 'pending' && <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>{t.studio.statusWaitingShort}</span>}
-                      {clip.status === 'downloading' && <span style={{ fontSize: '0.68rem', color: '#f59e0b' }}>{t.studio.statusSlicingShort}</span>}
+                      {clip.status === 'downloading' && <span style={{ fontSize: '0.68rem', color: 'var(--status-warning)' }}>{t.studio.statusSlicingShort}</span>}
                       {clip.status === 'transcribing' && <span style={{ fontSize: '0.68rem', color: '#8b5cf6' }}>{t.studio.statusCaptionsShort}</span>}
                       {clip.status === 'rendering' && <span style={{ fontSize: '0.68rem', color: '#3b82f6' }}>{t.studio.statusRenderingShort}</span>}
                       {clip.status === 'completed' && (
@@ -5705,7 +5705,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                             ⬇️ MP4
                           </a>
                         ) : (
-                          <span className="quick-dl-btn" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981' }}>
+                          <span className="quick-dl-btn" style={{ background: 'var(--status-success-bg)', color: 'var(--status-success)' }}>
                             ✓ Done
                           </span>
                         )
@@ -5716,11 +5716,11 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                             style={{
                               fontSize: '0.68rem',
                               fontWeight: 800,
-                              color: '#ff1e27',
-                              background: 'rgba(255, 30, 39, 0.15)',
+                              color: 'var(--status-error)',
+                              background: 'var(--status-error-bg)',
                               padding: '2px 8px',
                               borderRadius: 0,
-                              border: '1px solid #ff1e27',
+                              border: '1px solid var(--status-error)',
                               display: 'inline-flex',
                               alignItems: 'center',
                               gap: '0.25rem'
@@ -5733,10 +5733,10 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
                               type="button"
                               onClick={() => onRetryClip(idx)}
                               style={{
-                                background: 'rgba(245, 158, 11, 0.18)',
-                                border: '1px solid rgba(245, 158, 11, 0.5)',
+                                background: 'var(--status-warning-bg)',
+                                border: '1px solid var(--status-warning-bg)',
                                 borderRadius: 0,
-                                color: '#fbbf24',
+                                color: 'var(--status-warning)',
                                 fontSize: '0.68rem',
                                 fontWeight: 700,
                                 padding: '2px 8px',
@@ -5777,7 +5777,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
         <div className="custom-confirm-modal-overlay">
           <div className="custom-confirm-modal-card">
             <div className="confirm-modal-icon-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Trash2 size={24} color="#ff1e27" />
+              <Trash2 size={24} color="var(--status-error)" />
             </div>
             <h3 className="confirm-modal-title">{t.studio.confirmModalTitle}</h3>
             <p className="confirm-modal-desc" style={{ marginBottom: '1rem' }}>
@@ -5791,12 +5791,12 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
               margin: '0 0 1.5rem 0',
               padding: '0.85rem 1rem',
               borderRadius: '10px',
-              background: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              background: 'var(--border-color)',
+              border: '1px solid var(--border-color)',
               textAlign: 'left',
               fontSize: '0.78rem'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4ade80' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--status-success)' }}>
                 <span>✓</span>
                 <strong>{t.studio.confirmModalNotice}</strong>
               </div>

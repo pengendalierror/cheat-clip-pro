@@ -24,7 +24,7 @@
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 20px rgba(255, 0, 255, 0.12);
+  box-shadow: none;
   overflow: hidden;
   animation: modalScaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -106,7 +106,7 @@
 .spinnerPrimary {
   width: 44px;
   height: 44px;
-  border: 3px solid rgba(255, 0, 255, 0.2);
+  border: 3px solid var(--primary-soft);
   border-top-color: var(--primary);
   border-radius: var(--radius-full);
   animation: spin 0.8s linear infinite;
@@ -115,7 +115,7 @@
 .spinnerSuccess {
   width: 44px;
   height: 44px;
-  border: 3px solid rgba(16, 185, 129, 0.2);
+  border: 3px solid var(--status-success-bg);
   border-top-color: var(--status-success);
   border-radius: var(--radius-full);
   animation: spin 0.8s linear infinite;
@@ -124,7 +124,7 @@
 .spinnerSm {
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--border-color);
   border-top-color: var(--primary);
   border-radius: var(--radius-full);
   animation: spin 0.8s linear infinite;
@@ -184,7 +184,7 @@
 
 .commitBadge {
   padding: 0.2rem 0.5rem;
-  background: rgba(255, 0, 255, 0.08);
+  background: var(--primary-soft);
   border: 1px solid var(--primary);
   font-size: 0.75rem;
   font-family: var(--font-mono);
@@ -274,13 +274,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 0 16px var(--status-success-glow);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 
 .btnPrimary:hover {
   filter: brightness(1.15);
-  box-shadow: 0 0 24px var(--status-success-glow);
+  box-shadow: none;
 }
 
 .uptodateCard {

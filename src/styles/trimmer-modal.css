@@ -12,7 +12,7 @@
   overflow: hidden;
   background: var(--bg-surface);
   border: 1px solid var(--primary);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 25px var(--primary-glow);
+  box-shadow: none;
   animation: trimmerModalScaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -61,7 +61,7 @@
 .trimmer-limit-pill {
   font-size: 0.68rem;
   padding: 0.15rem 0.55rem;
-  background: rgba(255, 0, 255, 0.12);
+  background: var(--primary-soft);
   border: 1px solid var(--primary);
   color: var(--primary);
   font-family: var(--font-mono);
@@ -226,14 +226,14 @@
   border-color: var(--primary);
   color: #000;
   font-weight: 800;
-  box-shadow: 0 0 12px var(--primary-glow);
+  box-shadow: none;
 }
 
 .trimmer-btn-primary:hover:not(:disabled) {
   background: var(--primary-hover);
   border-color: var(--primary-hover);
   color: #000;
-  box-shadow: 0 0 18px var(--primary-glow);
+  box-shadow: none;
 }
 
 /* Metric Cards */
@@ -316,7 +316,7 @@
 }
 
 .trimmer-transcript-line.active {
-  background: rgba(255, 0, 255, 0.08);
+  background: var(--primary-soft);
   border-left: 2px solid var(--primary);
   color: var(--text-primary);
 }
@@ -397,19 +397,19 @@
   background: var(--primary);
   color: #000;
   border: 1px solid var(--primary);
-  box-shadow: 0 0 16px var(--primary-glow);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 
 .trimmer-download-btn:hover:not(:disabled) {
   filter: brightness(1.15);
-  box-shadow: 0 0 22px var(--primary-glow);
+  box-shadow: none;
 }
 
 .trimmer-download-btn.is-success {
   background: var(--status-success);
   border-color: var(--status-success);
-  box-shadow: 0 0 16px var(--status-success-glow);
+  box-shadow: none;
 }
 
 .trimmer-download-btn:disabled {

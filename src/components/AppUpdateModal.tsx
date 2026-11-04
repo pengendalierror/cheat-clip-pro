@@ -356,7 +356,7 @@ export const AppUpdateModal: React.FC<AppUpdateModalProps> = ({ isOpen, onClose 
               {/* Error Alert */}
               {errorMessage && (
                 <div className={styles.errorBanner} style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                  <AlertTriangle size={15} color="#ff1e27" style={{ flexShrink: 0 }} />
+                  <AlertTriangle size={15} color="var(--status-error)" style={{ flexShrink: 0 }} />
                   <span>{errorMessage}</span>
                 </div>
               )}

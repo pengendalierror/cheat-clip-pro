@@ -67,7 +67,7 @@ function _mountEncapsulatedAnchor(container: HTMLElement): void {
       color: #858296;
       user-select: none;
       box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid var(--border-color);
       margin-top: 3.5rem;
       position: relative;
       visibility: visible !important;
@@ -87,18 +87,18 @@ function _mountEncapsulatedAnchor(container: HTMLElement): void {
       text-decoration: underline;
       text-underline-offset: 4px;
       text-decoration-thickness: 1.5px;
-      text-decoration-color: #ff00ff;
+      text-decoration-color: var(--primary);
       cursor: pointer;
       outline: none;
       transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .vport-glow-link:hover {
-      color: #ff00ff;
-      text-decoration-color: #00ffff;
-      text-shadow: 0 0 12px rgba(255, 0, 255, 0.65);
+      color: var(--primary);
+      text-decoration-color: var(--status-info);
+      text-shadow: none;
     }
     .vport-glow-link:focus-visible {
-      outline: 1px dashed #00ffff;
+      outline: 1px dashed var(--status-info);
       outline-offset: 3px;
     }
   `;

@@ -29,3 +29,6 @@
 
 /* Modals & Precision Tools */
 @import "./styles/trimmer-modal.css";
+
+/* Replacement skin, must stay last */
+@import "./styles/look.css";

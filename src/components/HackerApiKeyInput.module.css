@@ -9,22 +9,22 @@
   position: relative;
   width: 100%;
   background: var(--bg-main);
-  border: 1px solid rgba(255, 0, 255, 0.35);
-  box-shadow: 0 0 8px rgba(255, 0, 255, 0.15);
+  border: 1px solid var(--primary-soft);
+  box-shadow: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .hasError {
   border-color: var(--accent-red);
-  box-shadow: 0 0 8px var(--accent-red-glow);
+  box-shadow: none;
 }
 
 .prefix {
   display: flex;
   align-items: center;
   padding: 0 0.65rem;
-  background: rgba(255, 0, 255, 0.08);
-  border-right: 1px solid rgba(255, 0, 255, 0.25);
+  background: var(--primary-soft);
+  border-right: 1px solid var(--primary-soft);
   color: var(--primary);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -71,7 +71,7 @@
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   color: var(--primary);
-  text-shadow: 0 0 6px var(--primary-glow);
+  text-shadow: none;
   pointer-events: none;
   z-index: 1;
   white-space: nowrap;
@@ -85,7 +85,7 @@
   align-items: center;
   gap: 2px;
   padding: 0 0.35rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--border-color);
   border-left: 1px solid var(--border-color);
 }
 
@@ -109,7 +109,7 @@
   align-items: center;
   gap: 0.35rem;
   background: transparent;
-  border: 1px solid rgba(255, 0, 255, 0.3);
+  border: 1px solid var(--primary-soft);
   color: var(--primary);
   cursor: pointer;
   font-family: var(--font-mono);
@@ -128,5 +128,5 @@
 }
 
 .isActive {
-  background: rgba(255, 0, 255, 0.15);
+  background: var(--primary-soft);
 }

@@ -15,7 +15,7 @@
   line-height: 1;
   letter-spacing: -0.02em;
   user-select: none;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.45);
+  text-shadow: none;
   margin-right: 0.1rem;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .pro-badge {
-  background: rgba(255, 0, 255, 0.1);
+  background: var(--primary-soft);
   border: 1px solid var(--primary);
   color: var(--primary);
   font-family: var(--font-mono);
@@ -53,7 +53,7 @@
   width: 8px;
   height: 8px;
   background: var(--primary);
-  box-shadow: 0 0 10px var(--primary);
+  box-shadow: none;
   flex-shrink: 0;
 }
 
@@ -81,8 +81,8 @@
   font-size: 0.8rem;
   font-weight: 600;
   font-family: var(--font-mono);
-  background: #0d0d14;
-  border: 1px solid #272238;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   display: flex;
   align-items: center;
@@ -103,34 +103,34 @@
 
 /* Cookies button — active (has cookies set) */
 .header-nav-btn.cookies-active {
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.45);
-  color: #4ade80;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);
+  background: var(--status-success-bg);
+  border: 1px solid var(--status-success-bg);
+  color: var(--status-success);
+  box-shadow: none;
 }
 
 .header-nav-btn.cookies-active:hover {
-  border-color: #4ade80;
-  color: #4ade80;
+  border-color: var(--status-success);
+  color: var(--status-success);
 }
 
 /* Support / donate button */
 .header-nav-btn.support-btn {
-  background: rgba(255, 0, 255, 0.08);
+  background: var(--primary-soft);
   border: 1px solid var(--primary);
   color: var(--primary);
   text-decoration: none;
 }
 
 .header-nav-btn.support-btn:hover {
-  background: rgba(255, 0, 255, 0.18);
-  box-shadow: 0 0 12px rgba(255, 0, 255, 0.3);
+  background: var(--primary-soft);
+  box-shadow: none;
 }
 
 /* Cookie status indicator */
 .cookie-status-icon {
   font-size: 0.85rem;
-  color: #22c55e;
+  color: var(--status-success);
 }
 
 .cookie-status-icon.inactive {
@@ -143,7 +143,7 @@
    -------------------------------------------------------------------------- */
 
 .workflow-tab-count {
-  background: rgba(0, 255, 102, 0.15);
+  background: var(--status-success-bg);
   color: var(--neon-green);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -167,23 +167,23 @@
 
 .virality-mini-badge.score-high {
   color: var(--neon-green);
-  background: rgba(0, 255, 102, 0.14);
+  background: var(--status-success-bg);
   border: 1.5px solid var(--neon-green);
-  box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+  box-shadow: none;
 }
 
 .virality-mini-badge.score-mid {
   color: var(--neon-cyan);
-  background: rgba(0, 240, 255, 0.14);
+  background: var(--status-info-bg);
   border: 1.5px solid var(--neon-cyan);
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+  box-shadow: none;
 }
 
 .virality-mini-badge.score-low {
-  color: #ff1e27;
-  background: rgba(255, 30, 39, 0.14);
-  border: 1.5px solid #ff1e27;
-  box-shadow: 0 0 8px rgba(255, 30, 39, 0.4);
+  color: var(--status-error);
+  background: var(--status-error-bg);
+  border: 1.5px solid var(--status-error);
+  box-shadow: none;
 }
 
 /* Timestamp under mini-badge */
@@ -199,7 +199,7 @@
 
 .virality-mini-ts:hover {
   color: var(--neon-cyan);
-  background: rgba(0, 240, 255, 0.1);
+  background: var(--status-info-bg);
 }
 
 /* Sidebar clip item layout */
@@ -229,21 +229,21 @@
 }
 
 .clip-dl-btn.state-ready {
-  background: rgba(0, 255, 102, 0.15);
+  background: var(--status-success-bg);
   border: 1px solid var(--neon-green);
   color: var(--neon-green);
 }
 
 .clip-dl-btn.state-downloading {
-  background: rgba(0, 229, 255, 0.15);
-  border: 1px solid #00e5ff;
-  color: #00e5ff;
+  background: var(--status-info-bg);
+  border: 1px solid var(--status-info);
+  color: var(--status-info);
   cursor: not-allowed;
 }
 
 .clip-dl-btn.state-ready:hover {
-  background: rgba(0, 255, 102, 0.25);
-  box-shadow: 0 0 10px rgba(0, 255, 102, 0.35);
+  background: var(--status-success-bg);
+  box-shadow: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -262,7 +262,7 @@
    -------------------------------------------------------------------------- */
 
 .copy-title-btn {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--border-color);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   padding: 0.2rem 0.55rem;
@@ -275,9 +275,9 @@
 }
 
 .copy-title-btn:hover {
-  background: rgba(168, 85, 247, 0.15);
+  background: var(--primary-soft);
   color: var(--primary);
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: var(--primary-soft);
 }
 
 /* --------------------------------------------------------------------------
@@ -287,11 +287,11 @@
 .studio-tab-preview-title {
   color: var(--primary);
   font-weight: 800;
-  text-shadow: 0 0 10px var(--primary);
+  text-shadow: none;
 }
 
 .studio-tab-preview-name {
-  color: #ffffff;
+  color: var(--text-primary);
   font-weight: 600;
   font-size: 0.88rem;
 }
@@ -338,7 +338,7 @@
 
 .row-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--border-color);
   margin: 0.15rem 0;
 }
 

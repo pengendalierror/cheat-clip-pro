@@ -222,7 +222,7 @@ export const HeatmapTimeline: React.FC<HeatmapTimelineProps> = ({
                 y2={height}
                 stroke="var(--text-primary)"
                 strokeWidth="2"
-                style={{ filter: 'drop-shadow(0 0 4px rgba(255,255,255,0.6))' }}
+                style={{ filter: 'drop-shadow(0 0 4px var(--bg-surface-hover))' }}
               />
               <circle
                 cx={playheadX}
@@ -241,7 +241,7 @@ export const HeatmapTimeline: React.FC<HeatmapTimelineProps> = ({
                 y1="0"
                 x2={hoverX}
                 y2={height}
-                stroke="rgba(255, 255, 255, 0.25)"
+                stroke="var(--border-color)"
                 strokeWidth="1"
                 strokeDasharray="2,2"
               />

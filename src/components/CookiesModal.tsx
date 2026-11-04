@@ -324,7 +324,7 @@ export const CookiesModal: React.FC<CookiesModalProps> = ({
           <div className={styles.confirmOverlay}>
             <div className={styles.confirmCard}>
               <div className={styles.confirmIconWrap} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Trash2 size={24} color="#ff1e27" />
+                <Trash2 size={24} color="var(--status-error)" />
               </div>
               <h3 className={styles.confirmTitle}>{t.cookies.clearCookiesConfirmTitle}</h3>
               <p className={styles.confirmDesc}>
