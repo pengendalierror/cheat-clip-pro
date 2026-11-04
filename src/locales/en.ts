@@ -39,7 +39,7 @@ export const en = {
     urlPlaceholder: "Paste video link here (e.g. https://www.youtube.com/watch?v=... or shorts, youtu.be)",
     gdriveUrlLabel: "Google Drive Video URL",
     gdriveUrlPlaceholder: "Paste Google Drive share link (e.g. https://drive.google.com/file/d/.../view)",
-    hackClips: "Hack Clips",
+    hackClips: "Find clips",
     processing: "Processing...",
 
     // AI Engine settings

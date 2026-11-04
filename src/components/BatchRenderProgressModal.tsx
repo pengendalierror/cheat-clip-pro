@@ -121,7 +121,7 @@ export const BatchRenderProgressModal: React.FC<BatchRenderProgressModalProps> =
                         onClick={() => navigator.clipboard.writeText(clip.error_message || clip.error || '')}
                         style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', justifyContent: 'flex-end' }}
                       >
-                        <AlertTriangle size={11} color="#ff1e27" style={{ flexShrink: 0 }} />
+                        <AlertTriangle size={11} color="var(--status-error)" style={{ flexShrink: 0 }} />
                         <span>{clip.error_message || clip.error}</span>
                       </span>
                     )}

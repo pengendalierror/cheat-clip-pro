@@ -98,12 +98,12 @@
   height: 8px;
   border-radius: var(--radius-full);
   background: var(--primary);
-  box-shadow: 0 0 6px var(--primary-glow);
+  box-shadow: none;
 }
 
 .boxClip {
   width: 8px;
   height: 8px;
   border: 1px dashed var(--secondary);
-  background: rgba(255, 0, 255, 0.12);
+  background: var(--primary-soft);
 }

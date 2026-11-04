@@ -33,7 +33,7 @@ export const HackerApiKeyInput: React.FC<HackerApiKeyInputProps> = ({
     >
       {/* Terminal prefix badge */}
       <div className={styles.prefix}>
-        KEY &gt;
+        Key
       </div>
 
       {/* Input container with ASCII # masking */}
@@ -82,7 +82,7 @@ export const HackerApiKeyInput: React.FC<HackerApiKeyInputProps> = ({
             className={`${styles.toggleBtn} ${isRevealed ? styles.isActive : ''}`}
           >
             {isRevealed ? <EyeOff size={14} /> : <Eye size={14} />}
-            <span style={{ fontSize: '0.72rem' }}>{isRevealed ? 'HIDE' : 'REVEAL'}</span>
+            <span style={{ fontSize: '0.72rem' }}>{isRevealed ? 'Hide' : 'Show'}</span>
           </button>
         )}
       </div>

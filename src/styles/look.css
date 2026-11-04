@@ -1,0 +1,271 @@
+/* Replacement skin. Loaded last so the old cyber chrome cannot show through. */
+
+body {
+  background-color: var(--bg-main) !important;
+  background-image: none !important;
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6,
+.studio-main-heading,
+.logo-title,
+.workflow-tab-btn,
+.glowing-btn,
+.header-nav-btn,
+.pro-badge,
+.status-pill,
+.timestamp-pill {
+  font-family: var(--font-sans) !important;
+  text-shadow: none !important;
+  letter-spacing: 0;
+}
+
+.logo-title {
+  font-family: var(--font-display) !important;
+  font-weight: 560 !important;
+  font-size: 1.7rem !important;
+  text-transform: none !important;
+  letter-spacing: -0.03em !important;
+  color: var(--text-primary) !important;
+}
+
+.prompt-marker,
+.studio-icon-badge {
+  display: none !important;
+}
+
+.app-header-wrapper,
+.glass-panel,
+.workflow-tab-bar,
+.history-highlight-panel,
+.history-entry-card,
+.active-video-banner,
+.form-input,
+.duration-selector,
+.header-nav-btn,
+.workflow-tab-btn {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: none !important;
+  color: var(--text-primary);
+  border-radius: var(--radius) !important;
+}
+
+.app-header-wrapper {
+  background: var(--bg-surface-elevated) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.workflow-tab-bar {
+  gap: 0.4rem;
+  padding: 0.35rem;
+  background: var(--bg-main) !important;
+  border: none !important;
+}
+
+.workflow-tab-btn {
+  border-radius: var(--radius) !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+}
+
+.workflow-tab-btn:hover:not(:disabled) {
+  background: var(--bg-surface-hover) !important;
+  color: var(--text-primary) !important;
+}
+
+.workflow-tab-btn.active {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--on-primary) !important;
+  box-shadow: none !important;
+}
+
+.workflow-tab-btn.active .workflow-step-num,
+.workflow-tab-btn.active .workflow-step-icon,
+.workflow-tab-btn.step-done .workflow-step-num,
+.workflow-tab-btn.step-done .workflow-step-icon {
+  color: var(--on-primary) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.workflow-tab-count,
+.workflow-tab-count.analyzing-badge {
+  background: var(--primary-soft) !important;
+  color: var(--primary) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-full) !important;
+}
+
+.workflow-tab-btn.active .workflow-tab-count {
+  background: rgba(255, 250, 246, 0.18) !important;
+  color: var(--on-primary) !important;
+}
+
+.glowing-btn {
+  background: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  color: var(--on-primary) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+}
+
+.glowing-btn:hover:not(:disabled) {
+  background: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--on-primary) !important;
+}
+
+.header-nav-btn {
+  border-radius: var(--radius-full) !important;
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  font-weight: 600;
+}
+
+.header-nav-btn:hover,
+.header-nav-btn.support-btn,
+.header-nav-btn.support-btn:hover {
+  background: var(--primary-soft) !important;
+  color: var(--primary) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.source-tab-btn {
+  border-radius: var(--radius-full) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: none !important;
+}
+
+.source-tab-btn.active {
+  background: var(--primary) !important;
+  color: var(--on-primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.source-tab-btn svg {
+  color: currentColor !important;
+}
+
+.hacker-api-key-container > div:first-child {
+  display: none !important;
+}
+
+.duration-btn {
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-family: var(--font-sans) !important;
+}
+
+.pro-badge {
+  background: var(--primary-soft) !important;
+  color: var(--primary) !important;
+  border: none !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 650 !important;
+}
+
+.text-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+  filter: none !important;
+}
+
+.form-input,
+.history-search-input {
+  background: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+}
+
+.form-input:focus,
+.history-search-input:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px var(--primary-soft) !important;
+}
+
+input[type="range"],
+.custom-range-slider,
+.studio-slider,
+.position-slider,
+.player-timeline-slider {
+  background: var(--border-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 4px !important;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+.custom-range-slider::-webkit-slider-thumb,
+.studio-slider::-webkit-slider-thumb,
+.position-slider::-webkit-slider-thumb,
+.player-timeline-slider::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb,
+.custom-range-slider::-moz-range-thumb,
+.studio-slider::-moz-range-thumb,
+.position-slider::-moz-range-thumb,
+.player-timeline-slider::-moz-range-thumb {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  background: var(--primary) !important;
+  border: 2px solid var(--bg-elevated) !important;
+  box-shadow: none !important;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  box-shadow: none !important;
+}
+
+.status-dot {
+  background: var(--status-success) !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+}
+
+.glass-panel:hover,
+.history-highlight-panel:hover,
+.history-entry-card:hover {
+  border-color: var(--border-active) !important;
+  box-shadow: none !important;
+}
+
+.active-video-banner {
+  border-left: 3px solid var(--primary) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.studio-tab-preview-title {
+  color: var(--text-muted) !important;
+  text-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+.virality-mini-badge,
+.virality-mini-badge.score-high,
+.virality-mini-badge.score-mid,
+.virality-mini-badge.score-low {
+  box-shadow: none !important;
+  border-radius: var(--radius-full) !important;
+}

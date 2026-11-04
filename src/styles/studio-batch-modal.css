@@ -5,13 +5,13 @@
    Batch Progress Modal Styles
    ============================================================ */
 .batch-progress-card {
-  background: linear-gradient(180deg, #181a29 0%, #0e101c 100%);
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-surface) 100%);
+  border: 1px solid var(--primary-soft);
   border-radius: 0;
   width: 100%;
   max-width: 680px;
   padding: 1.75rem;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(168, 85, 247, 0.2);
+  box-shadow: none;
   animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -26,7 +26,7 @@
   font-size: 1.25rem;
   font-family: var(--font-mono) !important;
   margin: 0;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .batch-subtitle {
@@ -41,7 +41,7 @@
 
 .batch-overall-bar {
   height: 10px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--border-color);
   border-radius: 0;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@
   height: 100%;
   background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
   transition: width 0.4s ease;
-  box-shadow: 0 0 12px rgba(255, 94, 58, 0.5);
+  box-shadow: none;
 }
 
 .batch-overall-meta {
@@ -74,8 +74,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
   padding: 0.65rem 1rem;
   border-radius: 0;
 }
@@ -96,7 +96,7 @@
 .batch-item-text {
   font-size: 0.82rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -110,25 +110,25 @@
 }
 
 .status-badge.pending {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--border-color);
   color: var(--text-muted);
 }
 
 .status-badge.active {
-  background: rgba(255, 94, 58, 0.15);
+  background: var(--status-warning-bg);
   color: var(--secondary);
-  border: 1px solid rgba(255, 94, 58, 0.3);
+  border: 1px solid var(--status-warning-bg);
   animation: pulse 1.5s infinite;
 }
 
 .status-badge.success {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: var(--status-success-bg);
+  color: var(--status-success);
+  border: 1px solid var(--status-success-bg);
 }
 
 .status-badge.error {
-  background: rgba(239, 68, 68, 0.15);
+  background: var(--status-error-bg);
   color: #ef4444;
 }
 
@@ -139,20 +139,20 @@
 }
 
 .btn-download-clip {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--status-success) 0%, var(--status-success) 100%);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.25rem 0.65rem;
   border-radius: 0;
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 8px var(--status-success-bg);
 }
 
 .btn-download-clip:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 4px 12px var(--status-success-bg);
 }
 
 .batch-footer-actions {
@@ -197,8 +197,8 @@
 }
 
 .batch-retry-single-btn:hover {
-  background: rgba(245, 158, 11, 0.25);
-  box-shadow: 0 0 8px var(--status-warning-glow);
+  background: var(--status-warning-bg);
+  box-shadow: none;
 }
 
 .batch-error-msg-box {
@@ -224,7 +224,7 @@
   font-size: 0.75rem;
   padding: 0.45rem 0.95rem;
   cursor: pointer;
-  box-shadow: 0 0 12px var(--status-warning-glow);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 

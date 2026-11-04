@@ -1,96 +1,90 @@
 :root {
-  /* ==========================================================================
-     CHEAT CLIP PRO - DESIGN SYSTEM TOKENS (Cyberpunk Brutalist)
-     ========================================================================== */
-
-  /* --- TYPOGRAPHY (Strict Single Source of Truth) --- */
-  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Cutting-room palette. One ink, warm paper, a single rust accent. */
+  color-scheme: light;
+  --font-sans: "Figtree", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: dark;
-  color: #f5f5f7;
-  background-color: #060608;
-
+  color: var(--text-primary);
+  background-color: var(--bg-main);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  /* --- SURFACES (Deep Pitch Black & Dark Charcoal) --- */
-  --bg-main: #060608;          /* Deepest solid pitch black */
-  --bg-surface: #0a0a0f;       /* Solid charcoal terminal card surface */
-  --bg-surface-elevated: #0c0b14; /* Elevated card surface */
-  --bg-surface-hover: #121118; /* Interactive hover card surface */
-  --bg-input: #08080c;         /* Input field background */
+  --bg-main: #efeae2;
+  --bg-surface: #f7f4ee;
+  --bg-surface-elevated: #fffdf8;
+  --bg-surface-hover: #e8e2d6;
+  --bg-input: #fffdf8;
+  --bg-elevated: #fffdf8;
 
-  /* --- BORDERS & ACCENTS --- */
-  --border-color: #201e2c;     /* Subtle precision cyber border */
-  --border-muted: #181524;     /* Muted secondary border */
-  --border-active: #2e2942;    /* Active card border */
-  --border-glow: rgba(255, 0, 255, 0.4);
-  --border-color-glow: rgba(255, 0, 255, 0.5);
+  --border-color: #ddd4c6;
+  --border-muted: #e7e0d4;
+  --border-active: #1c1915;
+  --border-glow: transparent;
+  --border-color-glow: transparent;
 
-  /* --- PRIMARY & BRAND NEONS --- */
-  --primary: #ff00ff;          /* True Pure Neon Magenta */
-  --primary-hover: #ff33ff;    /* Bright Magenta highlight */
-  --primary-glow: rgba(255, 0, 255, 0.5);
+  --primary: #7a3018;
+  --primary-hover: #642612;
+  --primary-ink: #fffaf6;
+  --on-primary: #fffaf6;
+  --primary-soft: #f3e3da;
+  --primary-glow: transparent;
 
-  --secondary: #e000e0;        /* Deep saturated magenta */
-  --secondary-glow: rgba(224, 0, 224, 0.4);
+  --secondary: #642612;
+  --secondary-glow: transparent;
 
-  /* --- SATURATED NEON TIERS & STATUSES --- */
-  --neon-cyan: #00f0ff;        /* Electric Cyan (Timestamps / Med-tier) */
-  --neon-cyan-glow: rgba(0, 240, 255, 0.45);
+  --neon-cyan: #3d4f5f;
+  --neon-cyan-glow: transparent;
+  --neon-orange: #8a5a12;
+  --neon-orange-glow: transparent;
+  --neon-green: #1f6b45;
+  --neon-green-glow: transparent;
+  --accent: #1f6b45;
+  --accent-glow: transparent;
+  --neon-yellow: #8a5a12;
+  --neon-yellow-glow: transparent;
+  --neon-red: #9b2c2c;
+  --neon-red-glow: transparent;
+  --accent-red: #9b2c2c;
+  --accent-red-glow: transparent;
 
-  --neon-orange: #ff6600;      /* Fire Orange (High-tier Virality / Terbakar) */
-  --neon-orange-glow: rgba(255, 102, 0, 0.45);
+  --text-primary: #1c1915;
+  --text-secondary: #5c564e;
+  --text-muted: #6f685f;
+  --text-disabled: #a39b90;
 
-  --neon-green: #00ff66;       /* Neon Lime (Low-tier Virality / JSON Download) */
-  --neon-green-glow: rgba(0, 255, 102, 0.45);
-  --accent: #00ff66;
-  --accent-glow: rgba(0, 255, 102, 0.35);
+  --status-warning: #8a5a12;
+  --status-warning-glow: transparent;
+  --status-warning-bg: #f8efd8;
+  --status-success: #1f6b45;
+  --status-success-glow: transparent;
+  --status-success-bg: #e5f0e8;
+  --status-error: #9b2c2c;
+  --status-error-glow: transparent;
+  --status-error-bg: #f8e4e2;
+  --status-info: #3d4f5f;
+  --status-info-glow: transparent;
+  --status-info-bg: #e7eef3;
 
-  --neon-yellow: #ffea00;      /* Electric Amber / Yellow (SRT / Notices) */
-  --neon-yellow-glow: rgba(255, 234, 0, 0.45);
+  --success: var(--status-success);
+  --success-soft: var(--status-success-bg);
+  --warning: var(--status-warning);
+  --warning-soft: var(--status-warning-bg);
+  --error: var(--status-error);
+  --error-soft: var(--status-error-bg);
 
-  --neon-red: #ff3366;         /* Crimson / Danger / Unmark */
-  --neon-red-glow: rgba(255, 51, 102, 0.45);
+  --radius-sharp: 10px;
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
 
-  --accent-red: #ff1e27;       /* Terminal Red */
-  --accent-red-glow: rgba(255, 30, 39, 0.35);
-
-  /* --- TEXT CONTRAST TOKENS --- */
-  --text-primary: #f8fafc;     /* High contrast white */
-  --text-secondary: #94a3b8;   /* Readable muted text */
-  --text-muted: #64748b;       /* Dim labels & hints */
-  --text-disabled: #475569;    /* Disabled text */
-
-  /* --- STATUS & ALERTS --- */
-  --status-warning: #f59e0b;
-  --status-warning-glow: rgba(245, 158, 11, 0.45);
-  --status-warning-bg: rgba(245, 158, 11, 0.12);
-  --status-success: #10b981;
-  --status-success-glow: rgba(16, 185, 129, 0.45);
-  --status-success-bg: rgba(16, 185, 129, 0.12);
-  --status-error: #ff1e27;
-  --status-error-glow: rgba(255, 30, 39, 0.45);
-  --status-error-bg: rgba(255, 30, 39, 0.15);
-  --status-info: #00f0ff;
-  --status-info-glow: rgba(0, 240, 255, 0.45);
-  --status-info-bg: rgba(0, 240, 255, 0.1);
-
-  /* --- RADIUS TOKENS (Brutalist Sharp Default) --- */
-  --radius-sharp: 0px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-full: 9999px;
-
-  /* --- MOTION --- */
-  --transition-fast: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow: 0 1px 2px rgba(28, 25, 21, 0.05), 0 12px 32px rgba(28, 25, 21, 0.06);
+  --transition-fast: 120ms ease;
+  --transition-smooth: 160ms ease;
 }

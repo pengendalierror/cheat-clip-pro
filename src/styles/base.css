@@ -4,15 +4,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0;
 }
 
 body {
   margin: 0;
   background-color: var(--bg-main);
   background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px),
+    linear-gradient(var(--border-color) 1px, transparent 1px);
   background-position: top;
   background-size: 40px 40px;
   background-attachment: fixed;
@@ -39,7 +38,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #201e2c;
+  background: var(--border-color);
   border: 1px solid var(--primary);
 }
 
@@ -76,8 +75,8 @@ code, pre {
 /* Full-Width Cyber Header Bar (johansa.com style - Edge-to-Edge Solid Dark) */
 .app-header-wrapper {
   width: 100%;
-  background: #08080c;
-  border-bottom: 1px solid #201e2c;
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
   position: relative;
   z-index: 50;
 }
@@ -109,7 +108,7 @@ code, pre {
 }
 
 .glass-panel:hover {
-  border-color: rgba(217, 70, 239, 0.4);
+  border-color: var(--primary-soft);
 }
 
 /* Machine-like Industrial Sliders (Horizontal Rectangle / Ke Samping, Strictly Zero Radius) */
@@ -124,16 +123,16 @@ input[type="range"],
   height: 6px !important;
   background: linear-gradient(
     to right,
-    var(--slider-fill-color, #ff00ff) 0%,
-    var(--slider-fill-color, #ff00ff) var(--slider-progress, 0%),
-    #0c0b12 var(--slider-progress, 0%),
-    #0c0b12 100%
+    var(--slider-fill-color, var(--primary)) 0%,
+    var(--slider-fill-color, var(--primary)) var(--slider-progress, 0%),
+    var(--bg-surface) var(--slider-progress, 0%),
+    var(--bg-surface) 100%
   ) !important;
-  border: 1px solid #201e2c !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 0;
   outline: none;
   cursor: pointer;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.95);
+  box-shadow: inset 0 2px 4px var(--bg-surface);
   margin: 8px 0;
 }
 
@@ -148,8 +147,8 @@ input[type="range"]::-webkit-slider-thumb,
   height: 10px !important;      /* Thin height for horizontal block ratio (3:1) */
   border-radius: 0;  /* STRICT ZERO RADIUS */
   border: 1px solid #ffffff !important;
-  background: #ff00ff !important;
-  box-shadow: 0 0 12px rgba(255, 0, 255, 0.85) !important;
+  background: var(--primary) !important;
+  box-shadow: none;
   cursor: ew-resize;
   transition: all 0.1s ease;
 }
@@ -159,9 +158,9 @@ input[type="range"]::-webkit-slider-thumb:hover,
 .studio-slider::-webkit-slider-thumb:hover,
 .position-slider::-webkit-slider-thumb:hover,
 .player-timeline-slider::-webkit-slider-thumb:hover {
-  background: #ff33ff !important;
-  border-color: #ffffff !important;
-  box-shadow: 0 0 18px rgba(255, 51, 255, 1) !important;
+  background: var(--primary-hover) !important;
+  border-color: var(--text-primary) !important;
+  box-shadow: none;
 }
 
 input[type="range"]::-moz-range-thumb,
@@ -173,8 +172,8 @@ input[type="range"]::-moz-range-thumb,
   height: 10px !important;
   border-radius: 0;
   border: 1px solid #ffffff !important;
-  background: #ff00ff !important;
-  box-shadow: 0 0 12px rgba(255, 0, 255, 0.85) !important;
+  background: var(--primary) !important;
+  box-shadow: none;
   cursor: ew-resize;
 }
 
@@ -185,8 +184,8 @@ input[type="checkbox"] {
   appearance: none !important;
   width: 15px !important;
   height: 15px !important;
-  background-color: #08080c !important;
-  border: 1.5px solid #383446 !important;
+  background-color: var(--bg-main) !important;
+  border: 1.5px solid var(--border-color) !important;
   border-radius: 0;
   margin: 0 !important;
   cursor: pointer !important;
@@ -198,14 +197,14 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-  border-color: #ff00ff !important;
-  background-color: #12101a !important;
+  border-color: var(--primary) !important;
+  background-color: var(--bg-surface) !important;
 }
 
 input[type="checkbox"]:checked {
-  background-color: #ff00ff !important;
-  border-color: #ff33ff !important;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary-hover) !important;
+  box-shadow: none;
 }
 
 input[type="checkbox"]:checked::after {
@@ -224,8 +223,8 @@ input[type="radio"] {
   appearance: none !important;
   width: 15px !important;
   height: 15px !important;
-  background-color: #08080c !important;
-  border: 1.5px solid #383446 !important;
+  background-color: var(--bg-main) !important;
+  border: 1.5px solid var(--border-color) !important;
   border-radius: 0;
   margin: 0 !important;
   cursor: pointer !important;
@@ -237,21 +236,21 @@ input[type="radio"] {
 }
 
 input[type="radio"]:hover {
-  border-color: #ff00ff !important;
-  background-color: #12101a !important;
+  border-color: var(--primary) !important;
+  background-color: var(--bg-surface) !important;
 }
 
 input[type="radio"]:checked {
-  background-color: #0c0b12 !important;
-  border-color: #ff00ff !important;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4) !important;
+  background-color: var(--bg-surface) !important;
+  border-color: var(--primary) !important;
+  box-shadow: none;
 }
 
 input[type="radio"]:checked::after {
   content: "" !important;
   width: 7px !important;
   height: 7px !important;
-  background-color: #ff00ff !important;
+  background-color: var(--primary) !important;
   border-radius: 0;
   display: block !important;
 }
@@ -262,7 +261,7 @@ input[type="radio"]:checked::after {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  background: #08080c;
+  background: var(--bg-main);
   border: 1px solid var(--border-color);
   padding: 0.35rem 0.65rem;
   margin-bottom: 0;
@@ -276,8 +275,8 @@ input[type="radio"]:checked::after {
   justify-content: center;
   gap: 0.65rem;
   padding: 0.75rem 1rem;
-  background: #0d0d14;
-  border: 1px solid #201e2c;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -290,22 +289,22 @@ input[type="radio"]:checked::after {
 }
 
 .workflow-tab-btn:hover:not(:disabled) {
-  background: rgba(217, 70, 239, 0.08);
-  border-color: rgba(217, 70, 239, 0.35);
+  background: var(--primary-soft);
+  border-color: var(--primary-soft);
   color: var(--text-primary);
 }
 
 .workflow-tab-btn.active {
-  background: #140a1c;
-  border: 1.5px solid #ff00ff;
-  color: #ff33ff;
-  box-shadow: inset 0 -2px 0 #ff00ff, 0 0 16px rgba(255, 0, 255, 0.3);
+  background: var(--primary-soft);
+  border: 1.5px solid var(--primary);
+  color: var(--primary-hover);
+  box-shadow: none;
 }
 
 .workflow-tab-btn.is-analyzing {
-  border-color: #f59e0b;
-  color: #fbbf24;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+  border-color: var(--status-warning);
+  color: var(--status-warning);
+  box-shadow: none;
 }
 
 .workflow-step-num {
@@ -317,8 +316,8 @@ input[type="radio"]:checked::after {
   font-size: 0.72rem;
   font-weight: 800;
   padding: 0 0.35rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   border-radius: 0;
   letter-spacing: 0;
@@ -326,16 +325,16 @@ input[type="radio"]:checked::after {
 }
 
 .workflow-tab-btn.active .workflow-step-num {
-  background: rgba(255, 0, 255, 0.2);
-  border-color: #ff00ff;
-  color: #ff00ff;
-  box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: none;
 }
 
 .workflow-tab-btn.step-done .workflow-step-num {
-  background: rgba(0, 255, 102, 0.15);
-  border-color: #00ff66;
-  color: #00ff66;
+  background: var(--status-success-bg);
+  border-color: var(--status-success);
+  color: var(--status-success);
 }
 
 .workflow-step-icon {
@@ -346,13 +345,13 @@ input[type="radio"]:checked::after {
 
 .workflow-tab-btn.active .workflow-step-icon {
   opacity: 1;
-  color: #ff00ff;
-  filter: drop-shadow(0 0 6px rgba(255, 0, 255, 0.6));
+  color: var(--primary);
+  filter: none;
 }
 
 .workflow-tab-btn.step-done .workflow-step-icon {
   opacity: 0.95;
-  color: #00ff66;
+  color: var(--status-success);
 }
 
 .workflow-step-title {
@@ -369,7 +368,7 @@ input[type="radio"]:checked::after {
   justify-content: center;
   gap: 0.25rem;
   padding: 0 0.25rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: var(--border-color);
   user-select: none;
   flex-shrink: 0;
 }
@@ -377,7 +376,7 @@ input[type="radio"]:checked::after {
 .workflow-process-connector .connector-line {
   width: 12px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border-color);
   transition: background 0.3s ease;
 }
 
@@ -387,22 +386,22 @@ input[type="radio"]:checked::after {
   justify-content: center;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.4);
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  color: var(--bg-surface-hover);
   transition: all 0.3s ease;
 }
 
 .workflow-process-connector.completed .connector-line {
-  background: #00ff66;
-  box-shadow: 0 0 6px rgba(0, 255, 102, 0.4);
+  background: var(--status-success);
+  box-shadow: none;
 }
 
 .workflow-process-connector.completed .connector-arrow-box {
-  background: rgba(0, 255, 102, 0.12);
-  border-color: #00ff66;
-  color: #00ff66;
-  box-shadow: 0 0 8px rgba(0, 255, 102, 0.35);
+  background: var(--status-success-bg);
+  border-color: var(--status-success);
+  color: var(--status-success);
+  box-shadow: none;
 }
 
 .workflow-tab-btn:disabled {
@@ -421,17 +420,17 @@ input[type="radio"]:checked::after {
 .workflow-tab-count {
   font-size: 0.72rem;
   padding: 0.1rem 0.45rem;
-  background: rgba(0, 255, 102, 0.15) !important;
-  border: 1px solid #00ff66 !important;
-  color: #00ff66 !important;
-  box-shadow: 0 0 8px rgba(0, 255, 102, 0.3) !important;
+  background: var(--status-success-bg) !important;
+  border: 1px solid var(--status-success) !important;
+  color: var(--status-success) !important;
+  box-shadow: none;
 }
 
 .workflow-tab-count.analyzing-badge {
-  background: rgba(245, 158, 11, 0.15) !important;
-  border: 1px solid #f59e0b !important;
-  color: #f59e0b !important;
-  box-shadow: 0 0 8px rgba(245, 158, 11, 0.35) !important;
+  background: var(--status-warning-bg) !important;
+  border: 1px solid var(--status-warning) !important;
+  color: var(--status-warning) !important;
+  box-shadow: none;
 }
 
 /* Active Video Status Banner (Flow level) */
@@ -440,10 +439,10 @@ input[type="radio"]:checked::after {
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 1.15rem;
-  background: #0a0a0f;
+  background: var(--bg-surface);
   border: 1.5px solid var(--primary);
   border-left: 4px solid var(--primary);
-  box-shadow: 0 0 16px rgba(240, 38, 255, 0.25);
+  box-shadow: none;
   font-family: var(--font-mono);
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -465,9 +464,9 @@ input[type="radio"]:checked::after {
 }
 
 .active-video-close-btn {
-  background: rgba(255, 30, 39, 0.12);
-  border: 1px solid rgba(255, 30, 39, 0.45);
-  color: #ff1e27;
+  background: var(--status-error-bg);
+  border: 1px solid var(--status-error-bg);
+  color: var(--status-error);
   border-radius: 0;
   padding: 0.4rem 0.75rem;
   font-size: 0.78rem;
@@ -478,15 +477,15 @@ input[type="radio"]:checked::after {
   align-items: center;
   justify-content: center;
   transition: all 0.15s ease;
-  box-shadow: 0 0 10px rgba(255, 30, 39, 0.2);
+  box-shadow: none;
 }
 
 .active-video-close-btn:hover {
-  background: #ff1e27;
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(255, 30, 39, 0.6);
+  background: var(--status-error);
+  color: var(--on-primary);
+  box-shadow: none;
 }
 
 .glass-panel:hover {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-color);
 }

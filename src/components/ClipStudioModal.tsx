@@ -128,7 +128,7 @@ export const ClipStudioModal: React.FC<ClipStudioModalProps> = ({
         {/* Header */}
         <div className="studio-modal-header">
           <div className="studio-header-title">
-            <div className="studio-icon-badge">&gt;_</div>
+            <div className="studio-icon-badge" aria-hidden="true" />
             <div>
               <div className="studio-title-row">
                 <h2>{t.studio.heading}</h2>
@@ -397,7 +397,7 @@ export const ClipStudioModal: React.FC<ClipStudioModalProps> = ({
             <div className="studio-section">
               <label className="studio-label">
                 <span>{t.studio.subtitlesTitle}</span>
-                <span className="studio-tag" style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#4ade80' }}>
+                <span className="studio-tag" style={{ background: 'var(--status-success-bg)', color: 'var(--status-success)' }}>
                   {t.studio.strictlyOneLine}
                 </span>
               </label>
@@ -589,9 +589,9 @@ export const ClipStudioModal: React.FC<ClipStudioModalProps> = ({
                     type="button"
                     onClick={handleToggleAll}
                     style={{
-                      background: selectedClips.length === availableClips.length ? 'rgba(239, 68, 68, 0.12)' : 'rgba(168, 85, 247, 0.15)',
-                      border: selectedClips.length === availableClips.length ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid rgba(168, 85, 247, 0.4)',
-                      color: selectedClips.length === availableClips.length ? '#f87171' : 'var(--primary, #a855f7)',
+                      background: selectedClips.length === availableClips.length ? 'var(--status-error-bg)' : 'var(--primary-soft)',
+                      border: selectedClips.length === availableClips.length ? '1px solid var(--status-error-bg)' : '1px solid var(--primary-soft)',
+                      color: selectedClips.length === availableClips.length ? 'var(--status-error)' : 'var(--primary, var(--primary))',
                       borderRadius: '5px',
                       padding: '0.18rem 0.5rem',
                       fontSize: '0.72rem',

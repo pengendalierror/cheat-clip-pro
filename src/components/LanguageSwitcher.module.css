@@ -44,6 +44,6 @@
 .active {
   background: var(--primary);
   color: #000;
-  box-shadow: 0 0 10px var(--primary-glow);
+  box-shadow: none;
   border-right-color: var(--primary);
 }

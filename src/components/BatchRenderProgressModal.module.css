@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 680px;
   padding: 1.75rem;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 25px rgba(255, 0, 255, 0.12);
+  box-shadow: none;
   animation: modalScaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
 
 .overallBar {
   height: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--border-color);
   overflow: hidden;
 }
 
@@ -74,7 +74,7 @@
   height: 100%;
   background: var(--gradient-primary);
   transition: width 0.35s ease;
-  box-shadow: 0 0 12px var(--primary-glow);
+  box-shadow: none;
 }
 
 .overallMeta {
@@ -108,7 +108,7 @@
 }
 
 .itemRow:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--border-color);
 }
 
 .itemColTitle {
@@ -151,13 +151,13 @@
 }
 
 .badgePending {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--border-color);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
 }
 
 .badgeActive {
-  background: rgba(255, 0, 255, 0.12);
+  background: var(--primary-soft);
   border: 1px solid var(--primary);
   color: var(--primary);
   animation: pulse 1.5s infinite;
@@ -189,7 +189,7 @@
   font-weight: 700;
   font-family: var(--font-mono);
   padding: 0.2rem 0.55rem;
-  box-shadow: 0 0 10px var(--status-success-glow);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 
@@ -218,8 +218,8 @@
 }
 
 .retrySingleBtn:hover {
-  background: rgba(245, 158, 11, 0.25);
-  box-shadow: 0 0 8px var(--status-warning-glow);
+  background: var(--status-warning-bg);
+  box-shadow: none;
 }
 
 .errorMsgBox {
@@ -255,7 +255,7 @@
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  box-shadow: 0 0 12px var(--status-warning-glow);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 
@@ -271,8 +271,8 @@
   text-decoration: none;
   background: var(--gradient-primary);
   border: 1px solid var(--primary);
-  color: #fff;
-  box-shadow: 0 0 14px var(--primary-glow);
+  color: var(--text-primary);
+  box-shadow: none;
   transition: var(--transition-fast);
 }
 
